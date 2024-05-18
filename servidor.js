@@ -24,7 +24,14 @@ mongoose
 
 app.use(express.json());
 
+// Ruta para archivos HTML en la carpeta 'secciones'
 app.use(express.static(path.join(__dirname, "secciones")));
+
+// Ruta para archivos CSS en la carpeta 'estilos'
+app.use("/estilos", express.static(path.join(__dirname, "estilos")));
+
+// Ruta para archivos JavaScript en la carpeta 'scripts'
+app.use("/scripts", express.static(path.join(__dirname, "scripts")));
 
 // Funciones de validación
 function validarNombre(nombre) {
