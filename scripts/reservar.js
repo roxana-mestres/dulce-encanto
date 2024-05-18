@@ -378,7 +378,11 @@ const handleClickFlechaDer = () => {
     flechaIzq.style.display = "block";
     flechaIzq.style.rotate = "180deg";
     flechaIzq.style.left = "280px";
-    flechaIzq.style.top = "10%";
+    if (window.innerHeight > 600) {
+      flechaIzq.style.top = "-5%";
+    } else {
+      flechaIzq.style.top = "10%";
+    }
   }
 };
 
@@ -390,15 +394,29 @@ const handleClickFlechaIzq = () => {
     flechaIzq.style.display = "none";
     flechaDer.style.display = "block";
     flechaDer.style.right = "0px";
-    flechaDer.style.top = "10%";
+    console.log(window.innerHeight)
+    if (window.innerHeight > 600) {
+      flechaDer.style.top = "-5%";
+    } else {
+      flechaDer.style.top = "10%";
+    }
   }
 };
 
 // Verifica el ancho de la ventana antes de agregar los event listeners
-if (window.innerWidth < 500) {
+// Verifica el ancho y alto de la ventana antes de agregar los event listeners
+if (window.innerWidth < 700) {
   flechaDer.style.display = "block";
   flechaDer.style.right = "0px";
-  flechaDer.style.top = "57%";
+  if (window.innerHeight > 600) {
+    flechaDer.style.top = "48%";
+  } else {
+    flechaDer.style.top = "57%";
+  }
   flechaDer.addEventListener("click", handleClickFlechaDer);
   flechaIzq.addEventListener("click", handleClickFlechaIzq);
 }
+
+window.addEventListener("resize", function() {
+  location.reload();
+});
