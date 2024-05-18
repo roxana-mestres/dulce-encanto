@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const Reserva = require("./reservaModelo");
+const path = require("path");
 
 // Configurar servidor Express
 const app = express();
@@ -15,9 +16,6 @@ app.use(
   })
 );
 
-// Servir archivos estáticos desde la carpeta 'secciones'
-app.use(express.static(__dirname + "/secciones"));
-
 // Conectar a MongoDB Atlas
 mongoose
   .connect(process.env.MONGODB_URI, {})
@@ -25,6 +23,8 @@ mongoose
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, "secciones")));
 
 // Funciones de validación
 function validarNombre(nombre) {
