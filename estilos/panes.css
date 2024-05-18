@@ -1,0 +1,334 @@
+/* BODY */
+body {
+  background-color: #ffb900;
+  height: 100vh;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+/* BARRA LATERAL */
+div.contenedor-img-texto.oculto {
+  display: none;
+}
+div.contenedor-pestanas {
+  height: calc(100vh - 140px);
+  justify-content: flex-end;
+  background-color: #ffb900;
+  padding-right: 30px;
+  padding-left: 20px;
+  z-index: 1;
+}
+div.contenedor-pestanas p {
+  color: #c21e65;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 3.5;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+p.nombre-pan.activa{
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #c21e65;
+  color: #ffb900;
+}
+
+.rectangulo {
+  position: absolute;
+  background-color: rgba(194, 30, 101, 0.8);
+  color: #ffb900; 
+  border-radius: 20px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; 
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) and (min-width: 320px) {
+  div.contenedor-pestanas {
+    display: none !important;
+  }
+}
+/* IMAGEN, TEXTO Y BOTONES */
+div.contenedor-general {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+div.contenedor-img-texto {
+  display: flex;
+  align-items: flex-start;
+  width: 85%;
+  height: calc(100vh - 140px);
+  position: relative;
+}
+
+div.contenedor-pestanas {
+  justify-content: center;
+}
+div.texto-btns,
+div.contenedor-pestanas {
+  display: flex;
+  flex-direction: column;
+}
+div.img img {
+  max-height: 60vh;
+  width: auto;
+  overflow: hidden;
+  position: absolute;
+  left: -5%;
+  top: 20%;
+}
+div.texto {
+  background-color: rgba(194, 30, 101, 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 60%;
+  transform: translateY(-50%);
+  max-width: 50%;
+}
+
+div.texto p {
+  color: #ffb900;
+  line-height: 2.5;
+  font-weight: 500;
+  text-align: justify;
+}
+
+div.botones button {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #c21e65;
+  color: #ffb900;
+  z-index: 2;
+}
+.botones {
+  margin-top: 5%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+div.texto-btns {
+  height: calc(100vh - 140px);
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 480px;
+}
+img.harina-img {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  z-index: -1;
+}
+h3.titulo-movil {
+  display: none;
+}
+div.flechas.movil {
+  display: none;
+}
+/* DIAL */
+img.dial {
+  max-width: 700px;
+  position: absolute;
+  top: -65%;
+  left: 30%;
+}
+div.div-dial {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+@keyframes girarDial {
+  to {
+    transform: rotate(50deg);
+  }
+}
+
+/*RESPONSIVE */
+@media screen and (max-width: 900px) and (min-width: 320px) {
+  div.texto-btns {
+    align-items: flex-start;
+  }
+  div.texto {
+    display: none;
+  }
+  div.botones {
+    flex-direction: column;
+  }
+  button.boton {
+    margin-top: 10px;
+  }
+  button.boton.uno {
+    width: 90px;
+  }
+  div.texto-btns{
+    width: 100%;
+    height: 90vh;
+    padding-left: 20px;
+    overflow: hidden;
+  }
+  div.contenedor-img-texto.activa {
+    width: 100%;
+    height: 90vh;
+  }
+  div.harina-img {
+    max-height: 50vh;
+    width: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  div.img img {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0%;
+    top: 25%;
+  }
+ 
+  h3.titulo-movil {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #c21e65;
+  }
+  nav div.logo {
+    height: 50px;
+    width: 50px;
+    background-size: 70px;
+    margin-left: 10px;
+  }
+  nav {
+    height: 10vh !important;
+    align-items: flex-start !important;
+  }
+  div.flechas.movil {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+  }
+  div.flecha.der,
+  div.flecha.izq {
+    width: 50px;
+    height: 50px;
+    background-image: url(/imagenes/flecha-panes.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  div.flecha.izq {
+    transform: rotate(180deg);
+  }
+  div.div-dial {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  img.dial {
+    position: absolute;
+    width: 140%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateDial 5s linear;
+  }
+
+  @keyframes girarDialMovil {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(50deg);
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 550px){
+  img.dial{
+    top: -10%;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 900px){
+  img.dial{
+    top: -15%;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1300px){
+  img.dial{
+    top: -55%;
+  }
+}
+@media screen and (min-width: 1301px) and (max-width: 1800px){
+  img.dial{
+    top: -40%;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1100px){
+  img.dial{
+    top: -55%;
+  }
+  div.texto {
+    display: none;
+  }
+}
+/* DESPLAZAMIENTO */
+.contenedor-img-texto.desplazarIntermedio {
+  animation: desplazarIntermedio 1s ease-in-out;
+}
+
+@keyframes desplazarIntermedio {
+  from {
+    opacity: 1;
+    left: 0;
+  }
+  to {
+    opacity: 0;
+    left: -100%;
+  }
+}
+/* ANIMACIÓN PESTAÑA ACTIVA */
+.contenedor-img-texto.activa {
+  opacity: 1;
+  left: 0;
+}
+.contenedor-img-texto.desplazarActivo {
+  animation: desplazarActivo 1s ease-in-out;
+}
+
+@keyframes desplazarActivo {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

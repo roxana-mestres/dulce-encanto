@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat:wght@300;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/estilos/zumos.css" />
+    <link rel="stylesheet" href="/estilos/comun.css" />
+    <title>Zumos, cafés, tés</title>
+  </head>
+  <body>
+    <!-- NAVEGACIÓN -->
+    <nav>
+      <a href="/secciones/index.html"><div class="logo"></div></a>
+    </nav>
+    <!-- BARRA LATERAL -->
+    <div class="contenedor-general">
+      <div class="contenedor-pestanas">
+        <p class="nombre-bebida activa" id="zumos">zumos</p>
+        <p class="nombre-bebida" id="expresso">expresso</p>
+        <p class="nombre-bebida" id="matcha">matcha</p>
+        <p class="nombre-bebida" id="chai">chai latte</p>
+        <p class="nombre-bebida" id="capuccino">capuccino</p>
+        <p class="nombre-bebida" id="frapuccino">frapuccino</p>
+      </div>
+      <!-- CONTENIDO PESTAÑA ZUMOS -->
+      <div class="contenedor-bebida activa">
+        <div class="flechas">
+          <div class="flecha-izq zumos"></div>
+          <div class="flecha-der zumos"></div>
+        </div>
+        <div class="img-fondo zumo"></div>
+        <img src="/imagenes/zumos_naturales.svg" alt="zumo de naranja" />
+        <div class="img-accent zumo"></div>
+        <div class="img-decoracion zumos"></div>
+        <div class="botones">
+          <button
+            class="boton uno"
+            onclick="window.location.href = 'reservar.html'"
+          >
+            reservar
+          </button>
+          <button class="boton" onclick="window.location.href = 'panes.html'">
+            más productos
+          </button>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA EXPRESSO -->
+      <div class="contenedor-bebida">
+        <div class="flechas">
+          <div class="flecha-izq expresso"></div>
+          <div class="flecha-der expresso"></div>
+        </div>
+        <div class="img-fondo expresso"></div>
+        <img src="/imagenes/expresso.svg" alt="expresso" />
+        <div class="img-accent expresso"></div>
+        <div class="img-decoracion expresso"></div>
+        <div class="botones">
+          <button
+            class="boton uno"
+            onclick="window.location.href = 'reservar.html'"
+          >
+            reservar
+          </button>
+          <button class="boton" onclick="window.location.href = 'panes.html'">
+            más productos
+          </button>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA MATCHA -->
+      <div class="contenedor-bebida">
+        <div class="flechas">
+          <div class="flecha-izq matcha"></div>
+          <div class="flecha-der matcha"></div>
+        </div>
+        <div class="img-fondo matcha"></div>
+        <img src="/imagenes/matcha.svg" alt="matcha" />
+        <div class="img-accent matcha"></div>
+        <div class="img-decoracion matcha"></div>
+        <div class="botones">
+          <button
+            class="boton uno"
+            onclick="window.location.href = 'reservar.html'"
+          >
+            reservar
+          </button>
+          <button class="boton" onclick="window.location.href = 'panes.html'">
+            más productos
+          </button>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA CHAI -->
+      <div class="contenedor-bebida">
+        <div class="flechas">
+          <div class="flecha-izq chai"></div>
+          <div class="flecha-der chai"></div>
+        </div>
+        <div class="img-fondo chai"></div>
+        <img src="/imagenes/chai_latte.svg" alt="chai" />
+        <div class="img-accent chai"></div>
+        <div class="img-decoracion chai"></div>
+        <div class="botones">
+          <button
+            class="boton uno"
+            onclick="window.location.href = 'reservar.html'"
+          >
+            reservar
+          </button>
+          <button class="boton" onclick="window.location.href = 'panes.html'">
+            más productos
+          </button>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA CAPUCCINO -->
+      <div class="contenedor-bebida">
+        <div class="flechas">
+          <div class="flecha-izq capuccino"></div>
+          <div class="flecha-der capuccino"></div>
+        </div>
+        <div class="img-fondo capuccino"></div>
+        <img src="/imagenes/capuccino.svg" alt="capuccino" />
+        <div class="img-accent capuccino"></div>
+        <div class="img-decoracion capuccino"></div>
+        <div class="botones">
+          <button
+            class="boton uno"
+            onclick="window.location.href = 'reservar.html'"
+          >
+            reservar
+          </button>
+          <button class="boton" onclick="window.location.href = 'panes.html'">
+            más productos
+          </button>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA FRAPUCCINO -->
+      <div class="contenedor-bebida">
+        <div class="flechas">
+          <div class="flecha-izq frapuccino"></div>
+          <div class="flecha-der frapuccino"></div>
+        </div>
+        <div class="img-fondo frapuccino"></div>
+        <img src="/imagenes/frapuccino.svg" alt="frapuccino" />
+        <div class="img-accent frapuccino"></div>
+        <div class="img-decoracion frapuccino"></div>
+        <div class="botones">
+          <button
+            class="boton uno"
+            onclick="window.location.href = 'reservar.html'"
+          >
+            reservar
+          </button>
+          <button class="boton" onclick="window.location.href = 'panes.html'">
+            más productos
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/zumos.js"></script>
+    <script src="/scripts/comun.js"></script>
+  </body>
+</html>

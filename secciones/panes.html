@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat:wght@300;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/estilos/panes.css" />
+    <link rel="stylesheet" href="/estilos/comun.css" />
+    <title>Selección de panes</title>
+  </head>
+  <body>
+    <!-- NAVEGACIÓN -->
+    <nav>
+      <a href="/secciones/index.html"><div class="logo"></div></a>
+    </nav>
+    <!-- DIAL & NOMBRES -->
+    <div class="div-dial">
+      <img src="/imagenes/dial.svg" alt="dial" class="dial" />
+    </div>
+    <!-- BARRA LATERAL -->
+    <div class="contenedor-general">
+      <div class="contenedor-pestanas">
+        <p class="nombre-pan activa" id="baguette">baguette</p>
+        <p class="nombre-pan" id="sourdough">sourdough</p>
+        <p class="nombre-pan" id="blanco">blanco</p>
+        <p class="nombre-pan" id="ciabatta">ciabatta</p>
+        <p class="nombre-pan" id="integral">integral</p>
+        <p class="nombre-pan" id="croissant">croissant</p>
+        <p class="nombre-pan" id="focaccia">focaccia</p>
+      </div>
+      <!-- CONTENIDO PESTAÑA BAGUETTE -->
+      <div class="contenedor-img-texto activa">
+        <div class="flechas movil">
+          <div class="flecha izq"></div>
+          <div class="flecha der"></div>
+        </div>
+        <h3 class="titulo-movil">baguette</h3>
+        <div class="img">
+          <img
+            src="/imagenes/baguette.svg"
+            alt="baguette"
+            id="contenido-baguette"
+            class="baguette"
+          />
+          <img src="/imagenes/harina.svg" alt="harina" class="harina-img" />
+        </div>
+        <div class="texto-btns">
+          <div class="texto">
+            <p>
+              La baguette libre de gluten está cuidadosamente elaborada con una
+              mezcla de harina de arroz integral y harina de tapioca, que
+              aseguran una textura esponjosa y un sabor auténtico. Además, se
+              añaden semillas de chía y psyllium husk para mantener su
+              elasticidad natural y mejorar su valor nutricional. 
+            </p>
+          </div>
+          <div class="botones">
+            <button
+              class="boton uno"
+              onclick="window.location.href = 'reservar.html'"
+            >
+              reservar
+            </button>
+            <button
+              class="boton dos"
+              onclick="window.location.href = 'tartas.html'"
+            >
+              más productos
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA SOURDOUGH -->
+      <div class="contenedor-img-texto oculto">
+        <div class="flechas movil">
+          <div class="flecha izq"></div>
+          <div class="flecha der"></div>
+        </div>
+        <h3 class="titulo-movil">sourdough</h3>
+        <div class="img">
+          <img
+            src="/imagenes/sourdough.svg"
+            alt="sourdough"
+            id="contenido-sourdough"
+            class="sourdough"
+          />
+          <img src="/imagenes/harina.svg" alt="harina" class="harina-img" />
+        </div>
+        <div class="texto-btns">
+          <div class="texto">
+            <p>
+              La hogaza de sourdough sin gluten es un verdadero tesoro
+              culinario, elaborado con una mezcla única de harinas alternativas
+              como la harina de quinoa y la harina de garbanzo, que proporcionan
+              un sabor profundo y una textura esponjosa. Sumérgete en su
+              aroma tentador y disfruta de la auténtica experiencia del
+              sourdough, ahora disponible sin gluten.
+            </p>
+          </div>
+          <div class="botones">
+            <button
+              class="boton uno"
+              onclick="window.location.href = 'reservar.html'"
+            >
+              reservar
+            </button>
+            <button
+              class="boton dos"
+              onclick="window.location.href = 'tartas.html'"
+            >
+              más productos
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA BLANCO -->
+      <div class="contenedor-img-texto oculto">
+        <div class="flechas movil">
+          <div class="flecha izq"></div>
+          <div class="flecha der"></div>
+        </div>
+        <h3 class="titulo-movil">blanco</h3>
+        <div class="img">
+          <img
+            src="/imagenes/pan_blanco.svg"
+            alt="pan blanco"
+            id="contenido-blanco"
+            class="blanco"
+          />
+          <img src="/imagenes/harina.svg" alt="harina" class="harina-img" />
+        </div>
+        <div class="texto-btns">
+          <div class="texto">
+            <p>
+              El pan de molde blanco sin gluten es una deliciosa opción para
+              aquellos que buscan una alternativa libre de gluten sin
+              comprometer el sabor ni la calidad. Elaborado con una cuidadosa
+              combinación de harina de maíz y almidón de patata, este pan ofrece
+              una textura suave y esponjosa que se deshace en la boca. 
+            </p>
+          </div>
+          <div class="botones">
+            <button
+              class="boton uno"
+              onclick="window.location.href = 'reservar.html'"
+            >
+              reservar
+            </button>
+            <button
+              class="boton dos"
+              onclick="window.location.href = 'tartas.html'"
+            >
+              más productos
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA CIABATTA -->
+      <div class="contenedor-img-texto oculto">
+        <div class="flechas movil">
+          <div class="flecha izq"></div>
+          <div class="flecha der"></div>
+        </div>
+        <h3 class="titulo-movil">ciabatta</h3>
+        <div class="img">
+          <img
+            src="/imagenes/ciabatta.svg"
+            alt="ciabatta"
+            id="contenido-ciabatta"
+            class="ciabatta"
+          />
+          <img src="/imagenes/harina.svg" alt="harina" class="harina-img" />
+        </div>
+        <div class="texto-btns">
+          <div class="texto">
+            <p>
+              La ciabatta sin gluten es una verdadera joya culinaria, elaborada
+              con una exquisita combinación de harina de arroz y almidón de
+              tapioca, que proporciona una textura aireada y una corteza
+              crujiente. Inspirada en la tradición italiana, esta ciabatta se
+              distingue por su sabor auténtico y su versatilidad en la cocina.
+            </p>
+          </div>
+          <div class="botones">
+            <button
+              class="boton uno"
+              onclick="window.location.href = 'reservar.html'"
+            >
+              reservar
+            </button>
+            <button
+              class="boton dos"
+              onclick="window.location.href = 'tartas.html'"
+            >
+              más productos
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA INTEGRAL -->
+      <div class="contenedor-img-texto oculto">
+        <div class="flechas movil">
+          <div class="flecha izq"></div>
+          <div class="flecha der"></div>
+        </div>
+        <h3 class="titulo-movil">integral</h3>
+        <div class="img">
+          <img
+            src="/imagenes/pan_integral.svg"
+            alt="pan integral"
+            id="contenido-integral"
+            class="integral"
+          />
+          <img src="/imagenes/harina.svg" alt="harina" class="harina-img" />
+        </div>
+        <div class="texto-btns">
+          <div class="texto">
+            <p>
+              El pan de molde integral sin gluten es una elección nutritiva y
+              deliciosa para aquellos que buscan cuidar su salud y disfrutar de
+              un pan sabroso. Elaborado con una cuidadosa mezcla de harina de
+              arroz integral, harina de quinoa y semillas de lino molidas, este
+              pan ofrece un sabor rico y una textura densa y satisfactoria.
+              
+            </p>
+          </div>
+          <div class="botones">
+            <button
+              class="boton uno"
+              onclick="window.location.href = 'reservar.html'"
+            >
+              reservar
+            </button>
+            <button
+              class="boton dos"
+              onclick="window.location.href = 'tartas.html'"
+            >
+              más productos
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA CROISSANT -->
+      <div class="contenedor-img-texto oculto">
+        <div class="flechas movil">
+          <div class="flecha izq"></div>
+          <div class="flecha der"></div>
+        </div>
+        <h3 class="titulo-movil">croissant</h3>
+        <div class="img">
+          <img
+            src="/imagenes/croissants.svg"
+            alt="croissant"
+            id="contenido-croissant"
+            class="croissant"
+          />
+          <img src="/imagenes/harina.svg" alt="harina" class="harina-img" />
+        </div>
+        <div class="texto-btns">
+          <div class="texto">
+            <p>
+              El croissant sin gluten es una delicia artesanal que combina la
+              tradición francesa con la necesidad de opciones alimenticias
+              libres de gluten. Elaborado con una mezcla única de harina de
+              almendra y almidón de maíz, este croissant ofrece una textura
+              hojaldrada y un sabor delicado.
+            </p>
+          </div>
+          <div class="botones">
+            <button
+              class="boton uno"
+              onclick="window.location.href = 'reservar.html'"
+            >
+              reservar
+            </button>
+            <button
+              class="boton dos"
+              onclick="window.location.href = 'tartas.html'"
+            >
+              más productos
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENIDO PESTAÑA FOCACCIA -->
+      <div class="contenedor-img-texto oculto">
+        <div class="flechas movil">
+          <div class="flecha izq"></div>
+          <div class="flecha der"></div>
+        </div>
+        <h3 class="titulo-movil">focaccia</h3>
+        <div class="img">
+          <img
+            src="/imagenes/focaccia.svg"
+            alt="focaccia"
+            id="contenido-focaccia"
+            class="focaccia"
+          />
+          <img src="/imagenes/harina.svg" alt="harina" class="harina-img" />
+        </div>
+        <div class="texto-btns">
+          <div class="texto">
+            <p>
+              La focaccia sin gluten es una delicia mediterránea que cautiva con
+              su sabor y su textura única. Elaborada con una cuidadosa
+              combinación de harina de arroz integral y harina de tapioca, esta
+              focaccia ofrece una base esponjosa y ligeramente crujiente.
+            </p>
+          </div>
+          <div class="botones">
+            <button
+              class="boton uno"
+              onclick="window.location.href = 'reservar.html'"
+            >
+              reservar
+            </button>
+            <button
+              class="boton dos"
+              onclick="window.location.href = 'tartas.html'"
+            >
+              más productos
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/panes.js"></script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+/* GENERAL */
+.contenido-scroll::-webkit-scrollbar {
+  display: none;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  transition: top 0.3s;
+}
+.contenedor-parallax {
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* CONTENIDO SECCIONES */
+
+div.texto.movil{
+  display: none;
+}
+div.muffin,
+div.texto-btns {
+  height: calc(100vh - 140px);
+  width: 50%;
+  padding: 20px;
+  transform-style: preserve-3d;
+}
+div.muffin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.fondo {
+  width: 150%;
+  height: 40vh;
+  background-image: url(/imagenes/fondo_muffins.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+div.muffin img {
+  width: 40vw;
+  height: auto;
+  position: absolute;
+}
+div.flecha {
+  width: 20vw;
+  height: 20vh;
+  background-image: url(/imagenes/flecha.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  position: absolute;
+  top: -5%;
+  left: -25%;
+}
+div.texto {
+  color: #dcd9ff;
+  font-family: "Chewy", system-ui;
+  font-size: 10vw;
+  line-height: 1;
+  margin-top: 10%;
+}
+/* BOTONES */
+div.botones a {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #dcd9ff;
+  color: #f22283;
+}
+.botones {
+  margin-top: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+.boton {
+  margin-left: 10px;
+}
+
+/* RESPONSIVE: SECCIONES Y BOTONES */
+
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  div.flecha {
+    display: none;
+  }
+  div.contenedor {
+    flex-direction: column;
+  }
+  div.texto {
+    display: none;
+  }
+  div.botones {
+    flex-direction: column;
+  }
+  .botones .boton:first-child {
+    margin-bottom: 10px;
+    width: 90px;
+  }
+  .botones .boton:nth-child(2) {
+    width: 145px;
+  }
+  div.texto-btns {
+    width: 100%;
+  }
+  div.muffin {
+    width: 100%;
+    height: 60vh;
+  }
+  div.muffin img {
+    width: 80vw;
+  }
+  div.texto.movil{
+    display: block;
+    margin-top: 120px;
+    text-align: center;
+  }
+}
+
+/* SECCIONES - PARALLAX */
+.seccion {
+  width: 100vw;
+  height: 120vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: translateZ(-1px) scale(2);
+}
+.normal {
+  width: 100%;
+  height: 120vh;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.normal.ocho {
+  height: 115vh;
+}
+div.contenedor {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  position: absolute;
+  inset: 0;
+}
+.seccion.uno {
+  background-color: #f22283;
+  margin-top: -40px;
+}
+.dos {
+  background-color: #310788;
+}
+.seccion.tres {
+  background-color: #6d0033;
+}
+.cuatro {
+  background-color: #db7600;
+}
+.seccion.cinco {
+  background-color: #173500;
+}
+.seis {
+  background-color: #940100;
+}
+.seccion.siete {
+  background-color: #44006d;
+}
+.ocho {
+  background-color: #ff495b;
+}
+
+/* RESPONSIVE: SECCIONES */

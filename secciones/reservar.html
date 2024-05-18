@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat:wght@300;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/estilos/reservar.css" />
+    <link rel="stylesheet" href="/estilos/comun.css" />
+    <title>Reservas</title>
+  </head>
+  <body>
+    <div class="contenedor-general">
+      <!-- NAVEGACIÓN -->
+      <nav>
+        <a href="/secciones/index.html"><div class="logo"></div></a>
+      </nav>
+
+      <h1>¡Visítanos!</h1>
+
+      <!-- FORMULARIO -->
+
+      <form action="" method="post">
+        <div class="formulario">
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            class="input"
+            placeholder="nombre"
+          />
+          <br />
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            class="input"
+            placeholder="correo electrónico"
+          />
+          <br />
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            class="input"
+            placeholder="número de teléfono"
+          />
+          <br />
+          <input
+            type="number"
+            id="personas"
+            name="personas"
+            class="input"
+            placeholder=" número de personas"
+          />
+          <br />
+          <input type="submit" class="enviar" value="Reservar" />
+        </div>
+      </form>
+
+      <!-- DIV SEMANA - HORA -->
+
+      <div class="semana-hora">
+        <div class="semana">
+          <p id="fecha">29 DE DICIEMBRE, 2023 - 05 DE ENERO, 2024</p>
+        </div>
+        <div class="botones">
+          <button class="flecha bajar"></button>
+          <button class="flecha subir"></button>
+        </div>
+        <div class="horario">
+          <button class="casilla am activo">A.M.</button>
+          <button class="casilla pm">P.M.</button>
+        </div>
+      </div>
+
+      <!-- DIV CALENDARIO -->
+
+      <div class="calendario">
+        <div class="flechas-reserva">
+          <div class="flecha der"></div>
+          <div class="flecha izq"></div>
+        </div>
+        <div class="contenedor-dia-hora">
+          <div id="lunes" class="contenedor-dia">
+            <div class="dia">lunes</div>
+            <div class="fecha">29/12</div>
+          </div>
+          <div class="horas">
+            <div class="hora uno">9:00 a.m.</div>
+            <div class="hora dos">10:00 a.m.</div>
+            <div class="hora tres">11:00 a.m.</div>
+          </div>
+        </div>
+        <div class="contenedor-dia-hora">
+          <div id="martes" class="contenedor-dia">
+            <div class="dia">martes</div>
+            <div class="fecha">30/12</div>
+          </div>
+          <div class="horas">
+            <div class="hora uno">9:00 a.m.</div>
+            <div class="hora dos">10:00 a.m.</div>
+            <div class="hora tres">11:00 a.m.</div>
+          </div>
+        </div>
+        <div class="contenedor-dia-hora">
+          <div id="miercoles" class="contenedor-dia">
+            <div class="dia">miércoles</div>
+            <div class="fecha">31/12</div>
+          </div>
+          <div class="horas">
+            <div class="hora uno">9:00 a.m.</div>
+            <div class="hora dos">10:00 a.m.</div>
+            <div class="hora tres">11:00 a.m.</div>
+          </div>
+        </div>
+        <div class="contenedor-dia-hora">
+          <div id="jueves" class="contenedor-dia">
+            <div class="dia">jueves</div>
+            <div class="fecha">01/01</div>
+          </div>
+          <div class="horas">
+            <div class="hora uno">9:00 a.m.</div>
+            <div class="hora dos">10:00 a.m.</div>
+            <div class="hora tres">11:00 a.m.</div>
+          </div>
+        </div>
+        <div class="contenedor-dia-hora">
+          <div class="contenedor-dia">
+            <div id="viernes" class="dia">viernes</div>
+            <div class="fecha">02/01</div>
+          </div>
+          <div class="horas">
+            <div class="hora uno">9:00 a.m.</div>
+            <div class="hora dos">10:00 a.m.</div>
+            <div class="hora tres">11:00 a.m.</div>
+          </div>
+        </div>
+        <div class="contenedor-dia-hora">
+          <div id="sabado" class="contenedor-dia">
+            <div class="dia">sábado</div>
+            <div class="fecha">03/01</div>
+          </div>
+          <div class="horas">
+            <div class="hora uno">9:00 a.m.</div>
+            <div class="hora dos">10:00 a.m.</div>
+            <div class="hora tres">11:00 a.m.</div>
+          </div>
+        </div>
+        <div class="contenedor-dia-hora">
+          <div id="domingo" class="contenedor-dia">
+            <div class="dia">domingo</div>
+            <div class="fecha">04/01</div>
+          </div>
+          <div class="horas">
+            <div class="hora uno">9:00 a.m.</div>
+            <div class="hora dos">10:00 a.m.</div>
+            <div class="hora tres">11:00 a.m.</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="linea-footer"></div>
+        <div class="iconos-rrss">
+          <div class="icono instagram"></div>
+          <div class="icono github"></div>
+          <div class="icono linkedin"></div>
+        </div>
+        <p>Página diseñada por Roxana Mestres</p>
+      </div>
+    </div>
+  </body>
+  <script src="/scripts/reservar.js"></script>
+  <script src="/scripts/comun.js"></script>
+</html>

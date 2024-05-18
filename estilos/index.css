@@ -1,0 +1,354 @@
+
+div.enlaces button {
+  margin-left: 20px;
+}
+a.boton {
+  background-color: #f57203;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 1.2em;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+a.boton:hover {
+  transform: scale(0.95);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* SECCIÓN HERO */
+h1 {
+  font-family: "Chewy", system-ui;
+  font-size: 20vw;
+  color: white;
+  line-height: 0.6;
+  padding-top: 15vh;
+}
+div.hero {
+  background: linear-gradient(#f22283, #f57203);
+  height: 100vh;
+}
+div.contenedor-titulo {
+  text-align: center;
+}
+img.muffin-cabecera {
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: height 0.5s;
+}
+h1.sobrepuesto {
+  position: relative;
+  z-index: 2;
+}
+img.frambuesas-cabecera {
+  height: 30vh;
+  position: relative;
+  top: 80%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+/* RESPONSIVE: SECCIÓN HERO */
+@media only screen and (max-width: 1100px) {
+  .contenedor-titulo {
+    padding-top: 8%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contenedor-titulo {
+    padding-top: 8%;
+  }
+  img.muffin-cabecera {
+    height: 50vh;
+    top: 50%;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .contenedor-titulo {
+    padding-top: 20%;
+  }
+  h1{
+    line-height: 0.4;
+    font-size: 28vw;
+  }
+  img.muffin-cabecera {
+    height: 50vh;
+    top: 50%;
+  }
+  img.frambuesas-cabecera {
+    height: 20vh;
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contenedor-titulo {
+    padding-top: 30%;
+  }
+  h1 {
+    font-size: 28vw;
+  }
+  img.muffin-cabecera {
+    height: 40vh;
+    top: 50%;
+  }
+  img.frambuesas-cabecera {
+    left: 45%;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .contenedor-titulo {
+    padding-top: 40%;
+  }
+  h1 {
+    font-size: 28vw;
+    line-height: 0.4;
+  }
+  img.muffin-cabecera {
+    height: 35vh;
+    top: 50%;
+  }
+  img.frambuesas-cabecera {
+    height: 15vh;
+  }
+}
+
+/* BANDA DE COLOR */
+
+div.banda-color {
+  height: 50px;
+  display: flex;
+  background-color: #f22283;
+  position: fixed;
+  bottom: 0px;
+  color: #c9e48c;
+  overflow: hidden;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 600;
+  z-index: 4;
+}
+
+div.banda-contenedor {
+  display: flex;
+  animation: moveContent 1000s linear infinite;
+  animation-iteration-count: infinite;
+}
+
+div.banda-color p,
+img.corazones-banda {
+  margin: 12.5px 15px;
+}
+
+@keyframes moveContent {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* SECCIÓN SOBRE NOSOTROS */
+div.sobre-nosotros {
+  background-color: #f22283;
+  color: #c9e48c;
+  height: 100vh;
+  width: 100%;
+  background-image: url(/imagenes/macaroons_sobre_nosotros.svg);
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-position: 125% 10%;
+  overflow: hidden;
+  border-top: 3px solid #c9e48c;
+}
+.sobre-nosotros h2 {
+  width: 70vw;
+  text-transform: uppercase;
+  font-size: 10vh;
+  padding: 70px 50px;
+}
+.sobre-nosotros p {
+  width: 70vw;
+  font-size: 4vh;
+  line-height: 2;
+  padding: 0 50px;
+  font-weight: 500;
+}
+div.sobre-nosotros-movil {
+  display: none;
+}
+
+/* RESPONSIVE: SECCIÓN SOBRE NOSOTROS */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  div.sobre-nosotros-movil {
+    height: 15%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+  div.sobre-nosotros-movil {
+    height: 30%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  div.sobre-nosotros {
+    background-image: none;
+    width: auto;
+  }
+  .sobre-nosotros h2 {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 5vh;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+  .sobre-nosotros p {
+    width: 100%;
+    font-size: 2.5vh;
+    line-height: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 150px;
+    font-weight: 500;
+  }
+  div.sobre-nosotros {
+    position: relative;
+    height: auto;
+  }
+
+  div.sobre-nosotros-movil {
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    background-image: url(/imagenes/macaroons_sobre_nosotros_m.png);
+    background-size: cover;
+  }
+}
+
+/* PRODUCTOS */
+
+div.productos-contenedor {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  border-top: 3px solid #c9e48c;
+}
+div.productos-contenedor div {
+  width: calc(100% / 4);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+div.muffins,
+div.zumos,
+div.panes,
+div.tartas {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding-top: 60px;
+  position: relative;
+}
+div.muffins:hover h2,
+div.zumos:hover h2,
+div.panes:hover h2,
+div.tartas:hover h2 {
+  opacity: 0;
+}
+div.productos-contenedor img {
+  opacity: 0;
+  height: 65vh;
+  position: absolute;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+div.productos-contenedor div.muffins:hover img,
+div.productos-contenedor div.zumos:hover img,
+div.productos-contenedor div.panes:hover img,
+div.productos-contenedor div.tartas:hover img {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+div.productos-contenedor:hover div.tartas img {
+  left: 90%;
+}
+div.productos-contenedor:hover div.muffins img {
+  height: 60vh;
+}
+div.muffins {
+  background-color: #f22283;
+  color: #dcd9ff;
+}
+div.zumos {
+  background-color: #f57203;
+  color: #ffb1d5;
+}
+div.panes {
+  background-color: #ffb900;
+  color: white;
+}
+div.tartas {
+  background-color: #dcd9ff;
+  color: #8c0444;
+}
+
+/* RESPONSIVE: PRODUCTOS */
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  div.productos-contenedor {
+    flex-direction: column;
+  }
+  div.productos-contenedor div {
+    width: 100%;
+  }
+  div.muffins,
+  div.zumos,
+  div.panes,
+  div.tartas {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 899px) {
+  div.productos-contenedor:hover div.tartas a img {
+    height: 35vh;
+    transform: translateY(-30%) translateX(-83%);
+  }
+  div.productos-contenedor:hover div.muffins img {
+    height: 55vh;
+    transform: translateY(-25%) translateX(-48%);
+  }
+  div.productos-contenedor:hover div.zumos img {
+    height: 55vh;
+    transform: translateY(-25%) translateX(-50%);
+  }
+  div.productos-contenedor:hover div.panes img {
+    height: 45vh;
+    transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  }
+
+  div.productos-contenedor:hover div.tartas img {
+    left: 83%;
+    width: 100%;
+  }
+}

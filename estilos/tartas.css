@@ -1,0 +1,278 @@
+/* GENERAL */
+body {
+  background-color: #dcd9ff;
+  color: #8c0444;
+}
+
+body,
+div.contenedor-general {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+div.img-fondo-tarta,
+div.img-fondo-estrellas,
+div.img-fondo-corazones,
+div.img-fondo-corazon {
+  width: 35vw;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+div.img-fondo-tarta {
+  top: 15%;
+  left: 3%;
+}
+div.img-fondo-tarta.arandanos,
+div.img-fondo-tarta.frambuesas,
+div.img-fondo-tarta.fresas {
+  background-image: url(/imagenes/tarta-decoracion-tartas.svg);
+}
+div.img-fondo-tarta.mango {
+  background-image: url(/imagenes/tarta-decoracion-tarta-verde.svg);
+}
+div.img-fondo-tarta.maracuya {
+  background-image: url(/imagenes/tarta-decoracion-maracuya.svg);
+}
+div.img-fondo-estrellas {
+  bottom: 0;
+  left: 15%;
+}
+div.img-fondo-estrellas.arandanos,
+div.img-fondo-estrellas.frambuesas,
+div.img-fondo-estrellas.fresas {
+  background-image: url(/imagenes/estrellas-decoracion-tartas.svg);
+}
+div.img-fondo-estrellas.mango {
+  background-image: url(/imagenes/estrellas-decoracion-tarta-verde.svg);
+}
+div.img-fondo-estrellas.maracuya {
+  background-image: url(/imagenes/estrellas-decoracion-tarta-maracuya.svg);
+}
+div.img-fondo-corazones {
+  top: 2%;
+  right: 8%;
+}
+div.img-fondo-corazones.arandanos,
+div.img-fondo-corazones.frambuesas,
+div.img-fondo-corazones.fresas {
+  background-image: url(/imagenes/corazones-decoracion-tartas.svg);
+}
+div.img-fondo-corazones.mango {
+  background-image: url(/imagenes/corazones-decoracion-tarta-verde.svg);
+}
+div.img-fondo-corazones.maracuya {
+  background-image: url(/imagenes/corazones-decoracion-tarta-maracuya.svg);
+}
+div.img-fondo-corazon {
+  right: 0%;
+  top: 10%;
+  height: 60vh;
+}
+div.img-fondo-corazon.arandanos,
+div.img-fondo-corazon.frambuesas,
+div.img-fondo-corazon.fresas {
+  background-image: url(/imagenes/corazon-decoracion-tartas.svg);
+}
+div.img-fondo-corazon.mango {
+  background-image: url(/imagenes/corazon-decoracion-tarta-verde.svg);
+}
+div.img-fondo-corazon.maracuya {
+  background-image: url(/imagenes/corazon-decoracion-tarta-maracuya.svg);
+}
+
+/* CONTENIDO */
+
+.contenedor-pestana {
+  display: none;
+}
+
+.contenedor-pestana.activa {
+  display: block;
+}
+
+h1 {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  left: 22%;
+  top: 8%;
+}
+
+div.tarta {
+  height: 65vh;
+  width: 65vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 22%;
+  top: 25%;
+}
+
+div.tarta.arandanos {
+  background-image: url(/imagenes/cheesecake_arandanos.svg);
+}
+
+div.tarta.frambuesas {
+  background-image: url(/imagenes/cheesecake_frambuesas.svg);
+}
+
+div.tarta.maracuya {
+  background-image: url(/imagenes/cheesecake_maracuya.svg);
+}
+
+div.tarta.fresas {
+  background-image: url(/imagenes/cheesecake_fresas.svg);
+}
+
+div.tarta.mango {
+  background-image: url(/imagenes/cheesecake_mango.svg);
+}
+
+div.flechas {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+div.flecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  width: 10vw;
+  height: 8vh;
+}
+
+div.flecha.arandanos {
+  background-image: url(/imagenes/flecha-tartas.svg);
+}
+
+div.flecha.frambuesas {
+  background-image: url(/imagenes/flecha-tartas-frambuesas.svg);
+}
+
+div.flecha.mango {
+  background-image: url(/imagenes/flecha-tartas-verde.svg);
+}
+
+div.flecha.maracuya {
+  background-image: url(/imagenes/flecha-tartas-maracuya.svg);
+}
+
+div.flecha.fresas {
+  background-image: url(/imagenes/flecha-tartas-fresas.svg);
+}
+
+.flecha.der {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  min-height: 8vh;
+}
+
+.flecha.izq {
+  position: absolute;
+  transform: rotate(180deg);
+  left: 0;
+  top: 50%;
+  min-height: 8vh;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 900px) and (min-width: 320px) {
+  div.tarta {
+    height: 50%;
+    width: 100%;
+    max-width: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translate(-50%, -30%);
+  }
+  div.tarta.arandanos {
+    background-size: 100%;
+  }
+  .botones {
+    left: 5%;
+    bottom: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .boton.dos {
+    width: 180px;
+  }
+  div.img-fondo-corazon {
+    right: 8%;
+    top: 27%;
+  }
+  div.img-fondo-corazones {
+    right: 0%;
+    top: 70%;
+  }
+  div.img-fondo-tarta {
+    right: 0%;
+    top: 23%;
+    width: 30vw;
+  }
+  div.img-fondo-estrellas {
+    right: 0%;
+    top: 65%;
+  }
+  h1 {
+    font-size: 2em;
+    left: 50%;
+    top: 18%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  div.img-fondo-tarta,
+  div.img-fondo-estrellas,
+  div.img-fondo-corazones,
+  div.img-fondo-corazon {
+    width: 35vw;
+    height: 25vh;
+  }
+  .flecha.der {
+    width: 8%;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .flecha.izq {
+    width: 8%;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+/* BOTONES */
+div.botones button {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #8c0444;
+  color: #dcd9ff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.botones {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.boton.uno {
+  width: 110px;
+}
+.boton {
+  margin-left: 10px;
+  margin-top: 10px;
+}

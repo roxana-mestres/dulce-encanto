@@ -1,0 +1,293 @@
+body {
+  background-color: #dcd9ff;
+  position: relative;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3.5em;
+  color: #8c0444;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.contenedor-general {
+  position: relative;
+}
+
+/* FORMULARIO */
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input.input {
+  background-color: white;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border: 3px solid #8c0444;
+}
+
+div.formulario {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.enviar {
+  position: absolute;
+  bottom: 15%;
+  right: -3%;
+  background-color: #8c0444;
+  color: #dcd9ff;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 15px;
+  margin-right: 6.5vw;
+}
+
+/* DIV SEMANA - HORA */
+
+div.semana-hora {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+div.semana p,
+div.horario {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #222;
+}
+
+div.botones {
+  position: relative;
+  width: 5vw;
+  height: 3vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: 5vw;
+}
+
+button.flecha {
+  position: absolute;
+  margin: 0;
+  width: 5vw;
+  height: 3vh;
+  background-image: url(/imagenes/flecha-reservar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.flecha.bajar {
+  margin-left: 2vw;
+}
+
+.flecha.subir {
+  transform: rotate(180deg);
+  right: 2vw;
+}
+
+p#fecha {
+  width: 600px;
+}
+
+button.casilla.activo {
+  background-color: #8c0444;
+  color: #dcd9ff;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: -5px;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  div.formulario{
+    justify-content: center;
+  }
+  div.semana-hora{
+    flex-direction: column;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  p#fecha{
+    width: 100%;
+    line-height: 2;
+    padding: 15px;
+    font-size: 3vw;
+  }
+  div.botones{
+    margin-left: -100px;
+  }
+  div.horario{
+    margin-left: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+/* DIV CALENDARIO */
+div.calendario {
+  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+div.horas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-dia-hora {
+  width: 100%;
+  height: 60vh;
+  padding: 20px;
+}
+
+div.dia {
+  font-size: 1.5em;
+  color: #222;
+  margin-bottom: 10px;
+}
+div.fecha {
+  font-size: 1em;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+div.hora {
+  margin-bottom: 20px;
+  border: 3px solid #8c0444;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  color: #8c0444;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+div.hora.seleccionada {
+  background-color: #8c0444;
+  color: white;
+}
+
+div.flechas-reserva{
+  display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  body{
+    overflow-x: hidden;
+  }
+  div.contenedor-dia-hora{
+    margin-left: 10px;
+    width: 80%;
+    height: 60vh;
+    padding: 10px;
+  }
+
+  div.dia, div.fecha, div.hora{
+    font-size: 14px;
+  }
+  div.dia{
+    font-weight: 600;
+  }
+  div.flechas-reserva{
+    display: block;
+  }
+  div.flecha{
+  position: absolute;
+  margin: -5px;
+  width: 5vw;
+  height: 60vh;
+  background-image: url(/imagenes/flecha-reservar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #dcd9ff;
+  }
+  .flecha.der{
+    display:none;
+  }
+  .flecha.izq{
+    display: none;
+  }
+}
+
+
+/* DIV FOOTER */
+div.linea-footer {
+  width: 100%;
+  height: 0.5vh;
+  margin: 0 auto;
+  background-color: #8c0444;
+}
+
+div.iconos-rrss {
+  width: 20%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+
+div.icono {
+  width: 5vw;
+  height: 8vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+div.icono.instagram {
+  background-image: url(/imagenes/instagram-logo.svg);
+}
+
+div.icono.github {
+  background-image: url(/imagenes/github-logo.svg);
+}
+
+div.icono.linkedin {
+  background-image: url(/imagenes/linkedin-logo.svg);
+}
+
+div.footer p {
+  color: #222;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 899px) {
+  div.icono{
+    width: 10vw;
+    margin-left: 5px;
+  }
+  div.iconos-rrss {
+    width: 30%;
+  }
+}

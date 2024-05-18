@@ -1,0 +1,301 @@
+/* GENERAL */
+body {
+  background-color: #ffb900;
+  width: 100%;
+  height: 100vh;
+}
+nav {
+  position: absolute;
+}
+div.contenedor-general {
+  width: 100%;
+  height: calc(100vh - 100px);
+  padding-top: 100px;
+  display: flex;
+}
+/* BARRA LATERAL */
+div.contenedor-pestanas {
+  height: calc(100vh - 140px);
+  width: 18%;
+  background-color: #ffb900;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 30px;
+  padding-left: 20px;
+  z-index: 1;
+}
+div.contenedor-pestanas p {
+  color: #f22283;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 3.5;
+  z-index: 1;
+  cursor: pointer;
+  padding-left: 50px;
+}
+
+/* RESPONSIVE: BARRA LATERAL */
+
+@media screen and (max-width: 900px) and (min-width: 320px) {
+  div.contenedor-pestanas {
+    display: none;
+  }
+}
+
+/* CONTENIDO PESTAÑAS */
+div.contenedor-bebida {
+  width: 75%;
+  max-height: calc(100vh - 100px);
+}
+div.contenedor-bebida:not(.activa){
+  display: none;
+}
+div.contenedor-bebida.activa{
+  display: block;
+}
+div.img-fondo {
+  width: 70vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+div.img-fondo.zumo{
+  background-image: url(/imagenes/fondo-zumos.svg);
+}
+div.img-fondo.expresso{
+  background-image: url(/imagenes/fondo-expresso.svg);
+}
+div.img-fondo.matcha{
+  background-image: url(/imagenes/fondo-matcha.svg);
+}
+div.img-fondo.chai{
+  background-image: url(/imagenes/fondo-chai.svg);
+}
+div.img-fondo.capuccino{
+  background-image: url(/imagenes/fondo-capuccino.svg);
+}
+div.img-fondo.frapuccino{
+  background-image: url(/imagenes/fondo-frapuccino.svg);
+}
+div.contenedor-bebida img {
+  width: 50vw;
+  height: auto;
+  position: absolute;
+  top: 15%;
+  left: 23%;
+}
+div.img-accent {
+  width: 40vw;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+div.img-accent.zumo{
+  background-image: url(/imagenes/decoracion-zumos.svg);
+}
+div.img-accent.expresso{
+  background-image: url(/imagenes/decoracion-expresso.svg);
+  top: 1%;
+  left: 30%;
+}
+div.img-accent.matcha{
+  background-image: url(/imagenes/decoracion-matcha.svg);
+  top: 50%;
+  left: 45%;
+}
+div.img-accent.chai{
+  background-image: url(/imagenes/decoracion-chai.svg);
+  top: 1%;
+  left: 40%;
+}
+div.img-accent.capuccino{
+  background-image: url(/imagenes/decoracion-capuccino.svg);
+  top: 1%;
+  left: 32%;
+}
+div.img-accent.frapuccino{
+  background-image: url(/imagenes/hielos.svg);
+  top: 50%;
+  left: 35%;
+}
+div.flechas{
+  display: none;
+}
+
+/* RESPONSIVE: CONTENIDO PESTAÑAS */
+@media screen and (max-width: 900px) and (min-width: 320px) {
+div.contenedor-bebida {
+  width: 100%;
+  height: 70vh;
+  margin-top: 100px;
+}
+div.img-fondo {
+  width: 100%;
+}
+div.contenedor-bebida img {
+  width: 80%;
+  top: 25%;
+  left: 12%;
+}
+div.img-accent{
+  top: 25%;
+  left: 29%;
+}
+div.flechas{
+  display: block;
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+div.flecha-izq, div.flecha-der{
+  width: 60px;
+  height: 60px;
+}
+div.flecha-izq{
+  background-repeat: no-repeat;
+  background-size: 60px;
+  position: absolute;
+  left: 0;
+  transform: rotate(180deg);
+}
+div.flecha-der{
+  
+  background-repeat: no-repeat;
+  background-size: 60px;
+  position: absolute;
+  right: 0;
+}
+div.flecha-der.zumos, div.flecha-izq.zumos{
+  background-image: url(/imagenes/flecha-zumos.svg);
+}
+div.flecha-der.frapuccino, div.flecha-izq.frapuccino{
+  background-image: url(/imagenes/flecha-frapuccino.svg);
+}
+div.flecha-der.capuccino, div.flecha-izq.capuccino{
+  background-image: url(/imagenes/flecha-capuccino.svg);
+}
+div.flecha-der.matcha, div.flecha-izq.matcha{
+  background-image: url(/imagenes/flecha-matcha.svg);
+}
+div.flecha-der.chai, div.flecha-izq.chai{
+  background-image: url(/imagenes/flecha-chai.svg);
+}
+div.flecha-der.expresso, div.flecha-izq.expresso{
+  background-image: url(/imagenes/flecha-expresso.svg);
+}
+
+div.img-accent.zumos {
+  top: 25%;
+  left: 28%;
+}
+
+div.img-accent.expresso {
+  top: 18%;
+  left: 28%;
+}
+
+div.img-accent.matcha {
+  top: 43%;
+  left: 40%;
+}
+
+div.img-accent.chai {
+  top: 23%;
+  left: 44%;
+}
+
+div.img-accent.capuccino {
+  top: 20%;
+  left: 33%;
+}
+
+div.img-accent.frapuccino {
+  top: 40%;
+  left: 35%;
+}
+
+}
+@media screen and (max-width: 900px) and (min-width: 750px) {
+  div.flecha-der, div.flecha-izq{
+    top: 50%;
+  }
+}
+@media screen and (max-width: 749px) and (min-width: 650px) {
+  div.flecha-der, div.flecha-izq{
+    top: 40%;
+  }
+}
+@media screen and (max-width: 649px) and (min-width: 320px) {
+  div.flecha-der, div.flecha-izq{
+    top: 30%;
+  }
+}
+/* BOTONES */
+div.botones button {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #f22283;
+  color: #ffb900;
+  text-align: center;
+  text-transform: uppercase;
+}
+.botones {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.boton.uno{
+  width: 110px;
+}
+.boton {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE: BOTONES */
+
+@media screen and (max-width: 900px) and (min-width: 320px) {
+  .botones{
+    left: 5%;
+    width: 205px;
+  }
+}
+/* IMAGEN ESTRELLA */
+div.img-decoracion{
+    width: 30vw;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5%;
+    right: 0;
+}
+div.img-decoracion.zumos{
+  background-image: url(/imagenes/estrellas-zumos.svg);
+}
+div.img-decoracion.expresso{
+  background-image: url(/imagenes/estrellas-expresso.svg);
+}
+div.img-decoracion.matcha{
+  background-image: url(/imagenes/estrellas-matcha.svg);
+}
+div.img-decoracion.chai{
+  background-image: url(/imagenes/estrellas-chai.svg);
+}
+div.img-decoracion.capuccino{
+  background-image: url(/imagenes/estrellas-capuccino.svg);
+}
+div.img-decoracion.frapuccino{
+  background-image: url(/imagenes/estrellas-frapuccino.svg);
+}
