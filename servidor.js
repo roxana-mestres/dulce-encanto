@@ -33,6 +33,9 @@ app.use("/estilos", express.static(path.join(__dirname, "estilos")));
 // Ruta para archivos JavaScript en la carpeta 'scripts'
 app.use("/scripts", express.static(path.join(__dirname, "scripts")));
 
+// Ruta para archivos de imágenes en la carpeta 'imagenes'
+app.use("/imagenes", express.static(path.join(__dirname, "imagenes")));
+
 // Funciones de validación
 function validarNombre(nombre) {
   const regex = /^[a-zA-Z\s]+$/;
