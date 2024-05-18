@@ -6,12 +6,12 @@ const Reserva = require("./reservaModelo");
 
 // Configurar servidor Express
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // Permitir solicitudes desde el frontend en el puerto 5500
 app.use(
   cors({
-    origin: "*",
+    origin: "https://dulce-encanto.onrender.com/",
   })
 );
 

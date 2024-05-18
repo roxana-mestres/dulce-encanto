@@ -116,7 +116,7 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     fechaSeleccionada: fecha,
   };
 
-  fetch("http://localhost:3000/reservas", {
+  fetch("https://dulce-encanto.onrender.com/reservas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
