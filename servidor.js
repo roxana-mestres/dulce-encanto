@@ -16,7 +16,7 @@ app.use(
 );
 
 // Servir archivos estáticos desde la carpeta 'secciones'
-app.use(express.static("./secciones/"));
+app.use(express.static(__dirname + "/secciones"));
 
 // Conectar a MongoDB Atlas
 mongoose
