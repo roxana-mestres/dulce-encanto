@@ -12,7 +12,7 @@ div.contenedor-img-texto.oculto {
   display: none;
 }
 div.contenedor-pestanas {
-  height: calc(100vh - 140px);
+  height: calc(100% - 140px);
   justify-content: flex-end;
   background-color: #ffb900;
   padding-right: 30px;
@@ -59,7 +59,7 @@ p.nombre-pan.activa{
 }
 /* IMAGEN, TEXTO Y BOTONES */
 div.contenedor-general {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ div.contenedor-img-texto {
   display: flex;
   align-items: flex-start;
   width: 85%;
-  height: calc(100vh - 140px);
+  height: 100%;
   position: relative;
 }
 
@@ -96,7 +96,7 @@ div.texto {
   right: 0;
   top: 60%;
   transform: translateY(-50%);
-  max-width: 50%;
+  max-width: 55%;
 }
 
 div.texto p {
@@ -121,11 +121,11 @@ div.botones button {
 }
 
 div.texto-btns {
-  height: calc(100vh - 140px);
+  height: 100%;
   width: 100%;
   justify-content: flex-end;
+  padding-bottom: 50px;
   align-items: flex-end;
-  padding-top: 480px;
 }
 img.harina-img {
   position: absolute;
@@ -177,9 +177,9 @@ div.div-dial {
   }
   div.texto-btns{
     width: 100%;
-    height: 90vh;
     padding-left: 20px;
     overflow: hidden;
+    padding-bottom: 0;
   }
   div.contenedor-img-texto.activa {
     width: 100%;
@@ -237,7 +237,7 @@ div.div-dial {
   }
   div.div-dial {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
   }
   img.dial {
