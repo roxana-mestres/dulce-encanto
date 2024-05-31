@@ -213,16 +213,7 @@ div.div-dial {
     font-size: 2em;
     color: #c21e65;
   }
-  nav div.logo {
-    height: 50px;
-    width: 50px;
-    background-size: 70px;
-    margin-left: 10px;
-  }
-  nav {
-    height: 10vh !important;
-    align-items: flex-start !important;
-  }
+
   div.flechas.movil {
     display: block;
     width: 100%;

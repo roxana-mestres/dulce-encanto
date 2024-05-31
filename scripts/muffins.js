@@ -30,14 +30,14 @@ function mostrarNavbar() {
 
 // Función para ocultar el navbar
 function ocultarNavbar() {
-  navbar.style.top = '-100px'; // Modifica el valor para ocultar completamente el navbar
+  navbar.style.top = '-100px';
 }
 
 // Función para reiniciar el temporizador
 function reiniciarTemporizador() {
   clearTimeout(timeout);
-  ocultarNavbar(); // Oculta el navbar
-  timeout = setTimeout(mostrarNavbar, 500); // Muestra el navbar después de 1 segundo de inactividad
+  ocultarNavbar();
+  timeout = setTimeout(mostrarNavbar, 500);
 }
 
 // Agrega event listeners para detectar eventos de scroll, mousemove y keydown

@@ -18,7 +18,7 @@
 }
 /* CONTENIDO SECCIONES */
 
-div.texto.movil{
+div.texto.movil {
   display: none;
 }
 div.muffin,
@@ -115,17 +115,25 @@ div.botones a {
   div.muffin img {
     width: 80vw;
   }
-  div.texto.movil{
+  div.texto.movil {
     display: block;
-    margin-top: 120px;
+    margin-top: 80px;
     text-align: center;
+  }
+ section.tres div.texto.movil, section.normal.cuatro div.texto.movil, section.cinco div.texto.movil, section.siete div.texto.movil, section.normal.seis div.texto.movil{
+    display: block;
+    margin-top: 150px;
+    text-align: center;
+  }
+  section.normal.ocho div.texto.movil {
+    margin-top: 100px;
   }
 }
 
 /* SECCIONES - PARALLAX */
 .seccion {
   width: 100vw;
-  height: 120vh;
+  height: 115vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -135,7 +143,7 @@ div.botones a {
 }
 .normal {
   width: 100%;
-  height: 120vh;
+  height: 115vh;
   background-color: white;
   position: relative;
   display: flex;
@@ -144,7 +152,7 @@ div.botones a {
   z-index: 2;
 }
 .normal.ocho {
-  height: 115vh;
+  height: 100vh;
 }
 div.contenedor {
   width: 100%;
@@ -152,22 +160,25 @@ div.contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
   position: absolute;
   inset: 0;
 }
 .seccion.uno {
   background-color: #f22283;
-  margin-top: -40px;
+  margin-top: -60px;
 }
 .dos {
   background-color: #310788;
+  margin-top: 40px;
 }
 .seccion.tres {
   background-color: #6d0033;
 }
 .cuatro {
   background-color: #db7600;
+}
+section.normal.cuatro .texto-btns .botones, section.tres .texto-btns .botones{
+  margin-top: 0;
 }
 .seccion.cinco {
   background-color: #173500;
@@ -181,5 +192,3 @@ div.contenedor {
 .ocho {
   background-color: #ff495b;
 }
-
-/* RESPONSIVE: SECCIONES */
