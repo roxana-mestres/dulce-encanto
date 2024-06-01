@@ -101,11 +101,11 @@ app.post("/reservas", (peticion, respuesta) => {
     .save()
     .then(() => {
       console.log("Reserva guardada correctamente en la base de datos");
-      respuesta.status(200).send("Reserva guardada correctamente");
+      respuesta.status(200).json({respuesta: "Reserva guardada correctamente" });;
     })
     .catch((error) => {
       console.error("Error al guardar la reserva:", error);
-      respuesta.status(500).send("Error al guardar la reserva");
+      respuesta.status(500).json({ error: "Error al guardar la reserva" });;
     });
 });
 
