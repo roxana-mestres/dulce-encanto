@@ -127,24 +127,28 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     },
     body: JSON.stringify(reservaData),
   })
-    .then(async (respuesta) => {
-      if (respuesta.ok) {
-        alert(
-          `Su reserva para el día ${dia} ${fecha} a las ${hora} ha sido realizada con éxito`
-        );
-      } else {
+    .then((respuesta) => {
+      return respuesta.text().then((texto) => {
         let errorData;
         try {
-          errorData = await respuesta.json();
+          errorData = JSON.parse(texto);
         } catch (e) {
-          errorData = await respuesta.text();
+          errorData = texto;
         }
-        console.error("Error al guardar la reserva:", respuesta.status, errorData);
-        alert(
-          `Error al guardar la reserva: ${respuesta.status}` +
-            (errorData && errorData.message ? ` - ${errorData.message}` : "")
-        );
-      }
+
+        if (respuesta.ok) {
+          alert("Reserva guardada correctamente");
+        } else {
+          console.error(
+            "Error al guardar la reserva:",
+            respuesta.status,
+            errorData
+          );
+          alert(
+            `Error al guardar la reserva: ${respuesta.status} - ${errorData}`
+          );
+        }
+      });
     })
     .catch((error) => {
       console.error("Error al enviar la solicitud:", error);

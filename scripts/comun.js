@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (posPreviaScroll > posActualScroll) {
       navbar.classList.remove("escondido"); // Eliminar la clase "escondido"
     } else {
-      console.log("Scroll hacia abajo");
       navbar.classList.add("escondido"); // Añadir la clase "escondido"
     }
 
