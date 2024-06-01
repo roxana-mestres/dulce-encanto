@@ -120,14 +120,26 @@ div.botones a {
     margin-top: 80px;
     text-align: center;
   }
- section.tres div.texto.movil, section.normal.cuatro div.texto.movil, section.cinco div.texto.movil, section.siete div.texto.movil, section.normal.seis div.texto.movil{
+
+  section.uno div.texto.movil,
+  section.tres div.texto.movil,
+  section.normal.cuatro div.texto.movil,
+  section.cinco div.texto.movil,
+  section.siete div.texto.movil,
+  section.normal.seis div.texto.movil {
     display: block;
-    margin-top: 150px;
+    margin-top: 140px;
     text-align: center;
   }
-  section.normal.ocho div.texto.movil {
+
+  section.normal.dos div.texto.movil{
+    margin-top: 160px;
+  }
+
+  section.normal.ocho div.texto.movil{
     margin-top: 100px;
   }
+
 }
 
 /* SECCIONES - PARALLAX */
@@ -177,7 +189,8 @@ div.contenedor {
 .cuatro {
   background-color: #db7600;
 }
-section.normal.cuatro .texto-btns .botones, section.tres .texto-btns .botones{
+section.normal.cuatro .texto-btns .botones,
+section.tres .texto-btns .botones {
   margin-top: 0;
 }
 .seccion.cinco {
