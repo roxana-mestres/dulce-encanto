@@ -16,6 +16,12 @@ app.use(
   })
 );
 
+app.use((peticion, respuesta, next) => {
+  console.log("Cuerpo del mensaje recibido:");
+  console.log(peticion.body);
+  next();
+});
+
 // Conectar a MongoDB Atlas
 mongoose
   .connect(process.env.MONGODB_URI, {})
