@@ -369,8 +369,4 @@ horasReserva.forEach((hora) => {
     // Llamar a sincronizarDiasSemana después de seleccionar una hora
     sincronizarDiasSemana(horaSeleccionada);
   });
-  if (!horaSeleccionada) {
-    alert("Por favor, selecciona una hora.");
-    return;
-  }
 });
