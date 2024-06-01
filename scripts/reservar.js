@@ -129,10 +129,12 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
         alert(`Su reserva para el día ${dia} ${fecha} a las ${hora} ha sido realizada con éxito`);
       } else {
         console.error("Error al guardar la reserva:", respuesta.status);
+        alert(`Error al guardar la reserva: ${respuesta.status} - ${errorData.message}`);
       }
     })
     .catch((error) => {
       console.error("Error al enviar la solicitud:", error);
+      alert(`Error al enviar la solicitud: ${error.message}`);
     });
 }
 
