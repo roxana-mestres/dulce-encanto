@@ -118,8 +118,6 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     fechaSeleccionada: fecha,
   };
 
-  console.log("Datos a enviar:", reservaData);
-
   fetch("https://dulce-encanto.onrender.com/reservas", {
     method: "POST",
     headers: {
@@ -141,11 +139,9 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
       }
     })
     .then((data) => {
-      console.log("Reserva guardada correctamente:", data);
       alert("Reserva guardada correctamente");
     })
     .catch((error) => {
-      console.error("Error al enviar la solicitud:", error);
       alert(`Error al enviar la solicitud: ${error.message}`);
     });
 }
