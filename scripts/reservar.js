@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
     horas.forEach((hora) => {
       if (hora.classList.contains("seleccionada")) {
         horaSeleccionada = hora.textContent;
-        console.log("Hora seleccionada:" + horaSeleccionada);
       }
     });
 
@@ -58,8 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const fechaSeleccionada = fechaSeleccionadaElement
       ? fechaSeleccionadaElement.textContent
       : "";
-    console.log("Día seleccionado:", diaSeleccionado);
-    console.log("Fecha seleccionada:", fechaSeleccionada);
+
+    if (!diaSeleccionado || !fechaSeleccionada) {
+      alert("Por favor, selecciona un día.");
+      return;
+    }
 
     function validarNombre(nombre) {
       const regex = /^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$/;
@@ -116,6 +118,8 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     fechaSeleccionada: fecha,
   };
 
+  console.log("Datos a enviar:", reservaData);
+
   fetch("https://dulce-encanto.onrender.com/reservas", {
     method: "POST",
     headers: {
@@ -123,19 +127,23 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     },
     body: JSON.stringify(reservaData),
   })
-    .then(async(respuesta) => {
+    .then(async (respuesta) => {
       if (respuesta.ok) {
-        console.log("Reserva guardada correctamente en la base de datos");
-        alert(`Su reserva para el día ${dia} ${fecha} a las ${hora} ha sido realizada con éxito`);
+        alert(
+          `Su reserva para el día ${dia} ${fecha} a las ${hora} ha sido realizada con éxito`
+        );
       } else {
         let errorData;
         try {
           errorData = await respuesta.json();
         } catch (e) {
-          console.error("No se pudo parsear el error del servidor:", e);
+          errorData = await respuesta.text();
         }
         console.error("Error al guardar la reserva:", respuesta.status, errorData);
-        alert(`Error al guardar la reserva: ${respuesta.status}` + (errorData && errorData.message ? ` - ${errorData.message}` : ''));
+        alert(
+          `Error al guardar la reserva: ${respuesta.status}` +
+            (errorData && errorData.message ? ` - ${errorData.message}` : "")
+        );
       }
     })
     .catch((error) => {
@@ -213,7 +221,6 @@ function obtenerInicioFinSemana(d) {
     finSemana.setMonth(inicioSemana.getMonth());
     finSemana.setDate(inicioSemana.getDate() + 6);
   }
-  console.log(inicioSemana, finSemana);
 
   primerDiaSemanaActual = inicioSemana;
   ultimoDiaSemanaActual = finSemana;
@@ -272,7 +279,6 @@ flechaSiguiente.addEventListener("click", function () {
 
 //Función para cambiar de semana
 function cambiarSemana(direccion) {
-  console.log("Clic en flecha");
   if (direccion === "anterior") {
     fechaActual.setDate(fechaActual.getDate() + 7);
   } else if (direccion === "siguiente") {
@@ -305,7 +311,6 @@ window.onload = function () {
 function sincronizarFechas() {
   const fechas = document.querySelectorAll(".fecha");
   fechas.forEach((fecha, index) => {
-    console.log(fecha, index);
     const dia = new Date(primerDiaSemanaActual);
     dia.setDate(primerDiaSemanaActual.getDate() + index);
     const diaSemana = dia.getDate().toString().padStart(2, "0");
@@ -364,5 +369,8 @@ horasReserva.forEach((hora) => {
     // Llamar a sincronizarDiasSemana después de seleccionar una hora
     sincronizarDiasSemana(horaSeleccionada);
   });
+  if (!horaSeleccionada) {
+    alert("Por favor, selecciona una hora.");
+    return;
+  }
 });
-
