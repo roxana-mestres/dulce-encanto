@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Fecha seleccionada:", fechaSeleccionada);
 
     function validarNombre(nombre) {
-      const regex = /^[a-zA-Z\s]+$/;
+      const regex = /^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$/;
       return regex.test(nombre);
     }
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validarTelefono(telefono) {
-      const regex = /^[0-9]{9}$/;
+      const regex = /^(\+\d{1,3}\s?)?(\d{9,15})$/;
       return regex.test(telefono);
     }
 
@@ -123,12 +123,12 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     },
     body: JSON.stringify(reservaData),
   })
-    .then((response) => {
-      if (response.ok) {
+    .then((respuesta) => {
+      if (respuesta.ok) {
         console.log("Reserva guardada correctamente en la base de datos");
         alert(`Su reserva para el día ${dia} ${fecha} a las ${hora} ha sido realizada con éxito`);
       } else {
-        console.error("Error al guardar la reserva:", response.status);
+        console.error("Error al guardar la reserva:", respuesta.status);
       }
     })
     .catch((error) => {
