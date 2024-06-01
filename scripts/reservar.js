@@ -123,13 +123,19 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     },
     body: JSON.stringify(reservaData),
   })
-    .then((respuesta) => {
+    .then(async(respuesta) => {
       if (respuesta.ok) {
         console.log("Reserva guardada correctamente en la base de datos");
         alert(`Su reserva para el día ${dia} ${fecha} a las ${hora} ha sido realizada con éxito`);
       } else {
-        console.error("Error al guardar la reserva:", respuesta.status);
-        alert(`Error al guardar la reserva: ${respuesta.status} - ${errorData.message}`);
+        let errorData;
+        try {
+          errorData = await respuesta.json();
+        } catch (e) {
+          console.error("No se pudo parsear el error del servidor:", e);
+        }
+        console.error("Error al guardar la reserva:", respuesta.status, errorData);
+        alert(`Error al guardar la reserva: ${respuesta.status}` + (errorData && errorData.message ? ` - ${errorData.message}` : ''));
       }
     })
     .catch((error) => {
