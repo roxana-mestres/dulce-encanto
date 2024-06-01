@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const telefono = document.getElementById("telefono").value;
     const personas = document.getElementById("personas").value;
 
-    // Validar los campos
+    /* // Validar los campos
     let errores = [];
 
     if (!validarNombre(nombre)) {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Errores:\n" + errores.join("\n"));
       return;
     }
-
+ */
     // Obtener la hora seleccionada
     let horaSeleccionada;
     horas.forEach((hora) => {
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ? fechaSeleccionadaElement.textContent
       : "";
 
-    if (!diaSeleccionado || !fechaSeleccionada) {
+    /* if (!diaSeleccionado || !fechaSeleccionada) {
       alert("Por favor, selecciona un día.");
       return;
     }
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function validarPersonas(personas) {
       const regex = /^[1-9][0-9]*$/;
       return regex.test(personas);
-    }
+    } */
 
     // Llamar a una función para guardar los datos
     guardarReserva(
@@ -129,18 +129,16 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
   })
     .then((respuesta) => {
       if (respuesta.ok) {
-        return respuesta.json(); // Convertir la respuesta a JSON si la solicitud fue exitosa
+        return respuesta.json();
       } else {
-        throw new Error("Error al guardar la reserva"); // Lanzar un error si la solicitud no fue exitosa
+        throw new Error("Error al guardar la reserva");
       }
     })
     .then((data) => {
-      // Manejar los datos de respuesta si es necesario
       console.log("Reserva guardada correctamente:", data);
       alert("Reserva guardada correctamente");
     })
     .catch((error) => {
-      // Capturar cualquier error ocurrido durante la solicitud
       console.error("Error al enviar la solicitud:", error);
       alert(`Error al enviar la solicitud: ${error.message}`);
     });
