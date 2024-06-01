@@ -127,11 +127,17 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     },
     body: JSON.stringify(reservaData),
   })
-    .then((respuesta) => {
-      if (respuesta.ok) {
-        return respuesta.json();
-      } else {
-        throw new Error("Error al guardar la reserva");
+    .then(async (respuesta) => {
+      try {
+        if (respuesta.ok) {
+          return await respuesta.json();
+        } else {
+          throw new Error("Error al guardar la reserva");
+        }
+      } catch (error) {
+        throw new Error(
+          `Error al analizar la respuesta como JSON: ${error.message}`
+        );
       }
     })
     .then((data) => {
