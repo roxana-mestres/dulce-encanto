@@ -42,27 +42,6 @@ app.use("/scripts", express.static(path.join(__dirname, "scripts")));
 // Ruta para archivos de imágenes en la carpeta 'imagenes'
 app.use("/imagenes", express.static(path.join(__dirname, "imagenes")));
 
-// Funciones de validación
-function validarNombre(nombre) {
-  const regex = /^[a-zA-Z\s]+$/;
-  return regex.test(nombre);
-}
-
-function validarCorreo(correo) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(correo);
-}
-
-function validarTelefono(telefono) {
-  const regex = /^[0-9]{10}$/;
-  return regex.test(telefono);
-}
-
-function validarPersonas(personas) {
-  const regex = /^[1-9][0-9]*$/;
-  return regex.test(personas);
-}
-
 // Definir una ruta POST para manejar las reservas
 app.post("/reservas", (peticion, respuesta) => {
   const {
