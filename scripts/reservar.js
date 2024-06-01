@@ -118,43 +118,31 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     fechaSeleccionada: fecha,
   };
 
-  console.log("Datos a enviar:", reservaData);
-
   fetch("https://dulce-encanto.onrender.com/reservas", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(reservaData),
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(reservaData),
+})
+  .then((respuesta) => {
+    console.log(respuesta);
+    if (respuesta.ok) {
+      return respuesta.json();
+    } else {
+      throw new Error("Error al guardar la reserva");
+    }
   })
-    .then((respuesta) => {
-      return respuesta.text().then((texto) => {
-        let errorData;
-        try {
-          errorData = JSON.parse(texto);
-        } catch (e) {
-          errorData = texto;
-        }
-
-        if (respuesta.ok) {
-          alert("Reserva guardada correctamente");
-        } else {
-          console.error(
-            "Error al guardar la reserva:",
-            respuesta.status,
-            errorData
-          );
-          alert(
-            `Error al guardar la reserva: ${respuesta.status} - ${errorData}`
-          );
-        }
-      });
-    })
-    .catch((error) => {
-      console.error("Error al enviar la solicitud:", error);
-      alert(`Error al enviar la solicitud: ${error.message}`);
-    });
-}
+  .then((data) => {
+    // Manejar los datos de respuesta si es necesario
+    console.log("Reserva guardada correctamente:", data);
+    alert("Reserva guardada correctamente");
+  })
+  .catch((error) => {
+    // Capturar cualquier error ocurrido durante la solicitud
+    console.error("Error al enviar la solicitud:", error);
+    alert(`Error al enviar la solicitud: ${error.message}`);
+  });
 
 /* HORAS */
 
@@ -374,3 +362,4 @@ horasReserva.forEach((hora) => {
     sincronizarDiasSemana(horaSeleccionada);
   });
 });
+}
