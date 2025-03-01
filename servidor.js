@@ -7,12 +7,11 @@ const path = require("path");
 
 // Configurar servidor Express
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3004;
 
-// Permitir solicitudes desde el frontend en el puerto 5500
 app.use(
   cors({
-    origin: "https://dulce-encanto.onrender.com/",
+    origin: "https://proyectos-roxana-mestres.xyz/",
   })
 );
 
@@ -33,13 +32,10 @@ app.use(express.json());
 // Ruta para archivos HTML en la carpeta 'secciones'
 app.use(express.static(path.join(__dirname, "secciones")));
 
-// Ruta para archivos CSS en la carpeta 'estilos'
 app.use("/estilos", express.static(path.join(__dirname, "estilos")));
 
-// Ruta para archivos JavaScript en la carpeta 'scripts'
 app.use("/scripts", express.static(path.join(__dirname, "scripts")));
 
-// Ruta para archivos de imágenes en la carpeta 'imagenes'
 app.use("/imagenes", express.static(path.join(__dirname, "imagenes")));
 
 // Funciones de validación
