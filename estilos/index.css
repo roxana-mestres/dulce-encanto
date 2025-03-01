@@ -163,7 +163,7 @@ div.sobre-nosotros {
   color: #c9e48c;
   height: 100vh;
   width: 100%;
-  background-image: url(/imagenes/macaroons_sobre_nosotros.svg);
+  background-image: url(/dulce-encanto/imagenes/macaroons_sobre_nosotros.svg);
   background-repeat: no-repeat;
   background-position: absolute;
   background-position: 125% 10%;
@@ -235,7 +235,7 @@ div.sobre-nosotros-movil {
     bottom: 0%;
     left: 0;
     width: 100%;
-    background-image: url(/imagenes/macaroons_sobre_nosotros_m.png);
+    background-image: url(/dulce-encanto/imagenes/macaroons_sobre_nosotros_m.png);
     background-size: cover;
   }
 }

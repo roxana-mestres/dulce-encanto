@@ -27,13 +27,13 @@ div.img-fondo-tarta {
 div.img-fondo-tarta.arandanos,
 div.img-fondo-tarta.frambuesas,
 div.img-fondo-tarta.fresas {
-  background-image: url(/imagenes/tarta-decoracion-tartas.svg);
+  background-image: url(/dulce-encanto/imagenes/tarta-decoracion-tartas.svg);
 }
 div.img-fondo-tarta.mango {
-  background-image: url(/imagenes/tarta-decoracion-tarta-verde.svg);
+  background-image: url(/dulce-encanto/imagenes/tarta-decoracion-tarta-verde.svg);
 }
 div.img-fondo-tarta.maracuya {
-  background-image: url(/imagenes/tarta-decoracion-maracuya.svg);
+  background-image: url(/dulce-encanto/imagenes/tarta-decoracion-maracuya.svg);
 }
 div.img-fondo-estrellas {
   bottom: 0;
@@ -42,13 +42,13 @@ div.img-fondo-estrellas {
 div.img-fondo-estrellas.arandanos,
 div.img-fondo-estrellas.frambuesas,
 div.img-fondo-estrellas.fresas {
-  background-image: url(/imagenes/estrellas-decoracion-tartas.svg);
+  background-image: url(/dulce-encanto/imagenes/estrellas-decoracion-tartas.svg);
 }
 div.img-fondo-estrellas.mango {
-  background-image: url(/imagenes/estrellas-decoracion-tarta-verde.svg);
+  background-image: url(/dulce-encanto/imagenes/estrellas-decoracion-tarta-verde.svg);
 }
 div.img-fondo-estrellas.maracuya {
-  background-image: url(/imagenes/estrellas-decoracion-tarta-maracuya.svg);
+  background-image: url(/dulce-encanto/imagenes/estrellas-decoracion-tarta-maracuya.svg);
 }
 div.img-fondo-corazones {
   top: 2%;
@@ -57,13 +57,13 @@ div.img-fondo-corazones {
 div.img-fondo-corazones.arandanos,
 div.img-fondo-corazones.frambuesas,
 div.img-fondo-corazones.fresas {
-  background-image: url(/imagenes/corazones-decoracion-tartas.svg);
+  background-image: url(/dulce-encanto/imagenes/corazones-decoracion-tartas.svg);
 }
 div.img-fondo-corazones.mango {
-  background-image: url(/imagenes/corazones-decoracion-tarta-verde.svg);
+  background-image: url(/dulce-encanto/imagenes/corazones-decoracion-tarta-verde.svg);
 }
 div.img-fondo-corazones.maracuya {
-  background-image: url(/imagenes/corazones-decoracion-tarta-maracuya.svg);
+  background-image: url(/dulce-encanto/imagenes/corazones-decoracion-tarta-maracuya.svg);
 }
 div.img-fondo-corazon {
   right: 0%;
@@ -73,13 +73,13 @@ div.img-fondo-corazon {
 div.img-fondo-corazon.arandanos,
 div.img-fondo-corazon.frambuesas,
 div.img-fondo-corazon.fresas {
-  background-image: url(/imagenes/corazon-decoracion-tartas.svg);
+  background-image: url(/dulce-encanto/imagenes/corazon-decoracion-tartas.svg);
 }
 div.img-fondo-corazon.mango {
-  background-image: url(/imagenes/corazon-decoracion-tarta-verde.svg);
+  background-image: url(/dulce-encanto/imagenes/corazon-decoracion-tarta-verde.svg);
 }
 div.img-fondo-corazon.maracuya {
-  background-image: url(/imagenes/corazon-decoracion-tarta-maracuya.svg);
+  background-image: url(/dulce-encanto/imagenes/corazon-decoracion-tarta-maracuya.svg);
 }
 
 /* CONTENIDO */
@@ -111,23 +111,23 @@ div.tarta {
 }
 
 div.tarta.arandanos {
-  background-image: url(/imagenes/cheesecake_arandanos.svg);
+  background-image: url(/dulce-encanto/imagenes/cheesecake_arandanos.svg);
 }
 
 div.tarta.frambuesas {
-  background-image: url(/imagenes/cheesecake_frambuesas.svg);
+  background-image: url(/dulce-encanto/imagenes/cheesecake_frambuesas.svg);
 }
 
 div.tarta.maracuya {
-  background-image: url(/imagenes/cheesecake_maracuya.svg);
+  background-image: url(/dulce-encanto/imagenes/cheesecake_maracuya.svg);
 }
 
 div.tarta.fresas {
-  background-image: url(/imagenes/cheesecake_fresas.svg);
+  background-image: url(/dulce-encanto/imagenes/cheesecake_fresas.svg);
 }
 
 div.tarta.mango {
-  background-image: url(/imagenes/cheesecake_mango.svg);
+  background-image: url(/dulce-encanto/imagenes/cheesecake_mango.svg);
 }
 
 div.flechas {
@@ -149,23 +149,23 @@ div.flecha {
 }
 
 div.flecha.arandanos {
-  background-image: url(/imagenes/flecha-tartas.svg);
+  background-image: url(/dulce-encanto/imagenes/flecha-tartas.svg);
 }
 
 div.flecha.frambuesas {
-  background-image: url(/imagenes/flecha-tartas-frambuesas.svg);
+  background-image: url(/dulce-encanto/imagenes/flecha-tartas-frambuesas.svg);
 }
 
 div.flecha.mango {
-  background-image: url(/imagenes/flecha-tartas-verde.svg);
+  background-image: url(/dulce-encanto/imagenes/flecha-tartas-verde.svg);
 }
 
 div.flecha.maracuya {
-  background-image: url(/imagenes/flecha-tartas-maracuya.svg);
+  background-image: url(/dulce-encanto/imagenes/flecha-tartas-maracuya.svg);
 }
 
 div.flecha.fresas {
-  background-image: url(/imagenes/flecha-tartas-fresas.svg);
+  background-image: url(/dulce-encanto/imagenes/flecha-tartas-fresas.svg);
 }
 
 .flecha.der {

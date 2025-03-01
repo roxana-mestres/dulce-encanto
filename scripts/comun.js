@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const posActualScroll = window.pageYOffset;
 
     if (posPreviaScroll > posActualScroll) {
-      navbar.classList.remove("escondido"); // Eliminar la clase "escondido"
+      navbar.classList.remove("escondido");
     } else {
-      navbar.classList.add("escondido"); // Añadir la clase "escondido"
+      navbar.classList.add("escondido");
     }
 
     posPreviaScroll = posActualScroll;

@@ -5,13 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   botonReservar.addEventListener("click", function (event) {
     event.preventDefault();
 
-    // Obtener los valores del formulario
     const nombre = document.getElementById("nombre").value;
     const correo = document.getElementById("correo").value;
     const telefono = document.getElementById("telefono").value;
     const personas = document.getElementById("personas").value;
 
-    // Validar los campos
     let errores = [];
 
     if (!validarNombre(nombre)) {
@@ -83,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return regex.test(personas);
     }
 
-    // Llamar a una función para guardar los datos
     guardarReserva(
       nombre,
       correo,
@@ -94,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
       fechaSeleccionada
     );
 
-    // Restablecer el formulario después de enviar
     document.getElementById("nombre").value = "";
     document.getElementById("correo").value = "";
     document.getElementById("telefono").value = "";
@@ -106,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Función para guardar reserva
 function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
   const reservaData = {
     nombre: nombre,
@@ -118,7 +113,7 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     fechaSeleccionada: fecha,
   };
 
-  fetch("https://dulce-encanto.onrender.com/reservas", {
+  fetch("https://proyectos-roxana-mestres.xyz/reservas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -222,7 +217,6 @@ function obtenerInicioFinSemana(d) {
   return [inicioSemana, finSemana];
 }
 
-// Función para formatear la fecha
 
 function formatearFecha(fecha) {
   const diasSemana = [
@@ -257,7 +251,6 @@ function formatearFecha(fecha) {
   return `${diaSemana} ${dia} DE ${mes}, ${año}`;
 }
 
-//Función para cambiar de semana
 let fechaActual = new Date();
 
 const flechaAnterior = document.querySelector(".flecha.bajar");
@@ -330,20 +323,17 @@ function sincronizarDiasSemana(horaSeleccionada) {
     const diaElemento = horaSeleccionada
       .closest(".contenedor-dia-hora")
       .querySelector(".dia");
-    const diaTexto = diaElemento.textContent.trim(); // Obtener el texto del día sin espacios en blanco
+    const diaTexto = diaElemento.textContent.trim();
 
-    // Obtener el índice del día en el arreglo diasSemana
     const diaNumero = diasSemana.indexOf(diaTexto);
-    // Guardar el índice + 1 (para que domingo sea 1 en lugar de 0)
+ 
     const diaSeleccionado = diaNumero !== -1 ? diaNumero + 1 : "";
 
-    // Remover la clase "seleccionado" de todos los días
     document
       .querySelectorAll(".dia")
       .forEach((dia) => dia.classList.remove("seleccionado"));
     diaElemento.classList.add("seleccionado");
 
-    // Guardar el número del día seleccionado en un atributo de datos
     diaElemento.dataset.diaNumero = diaSeleccionado;
   });
 }
@@ -360,7 +350,6 @@ horasReserva.forEach((hora) => {
     // Obtener la hora seleccionada
     const horaSeleccionada = hora.textContent;
 
-    // Llamar a sincronizarDiasSemana después de seleccionar una hora
     sincronizarDiasSemana(horaSeleccionada);
   });
 });

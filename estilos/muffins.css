@@ -37,7 +37,7 @@ div.muffin {
 div.fondo {
   width: 150%;
   height: 40vh;
-  background-image: url(/imagenes/fondo_muffins.svg);
+  background-image: url(/dulce-encanto/imagenes/fondo_muffins.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -51,7 +51,7 @@ div.muffin img {
 div.flecha {
   width: 20vw;
   height: 20vh;
-  background-image: url(/imagenes/flecha.svg);
+  background-image: url(/dulce-encanto/imagenes/flecha.svg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;

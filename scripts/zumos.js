@@ -1,4 +1,3 @@
-// Función para cambiar los colores según la pestaña activa
 function cambiarColores(pestanaId) {
   console.log(pestanaId);
   const body = document.querySelector("body");
@@ -103,44 +102,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   flechaDer.forEach((flecha, i) => {
     flecha.addEventListener("click", function () {
-      // Ocultar todas las pestañas
       contenidoPestana.forEach((contenido) => contenido.classList.remove("activa"));
       
-      // Calcular el índice de la nueva pestaña activa
       const nuevaPestanaIndex = (i + 1) % contenidoPestana.length;
 
-      // Mostrar la nueva pestaña activa
       contenidoPestana[nuevaPestanaIndex].classList.add("activa");
 
-      // Obtener el ID de la nueva pestaña activa
       const nuevaPestanaId = pestanas[nuevaPestanaIndex].id;
 
-      // Cambiar los colores según la nueva pestaña activa
       cambiarColores(nuevaPestanaId);
     });
   });
 
   flechaIzq.forEach((flecha, i) => {
     flecha.addEventListener("click", function () {
-      // Ocultar todas las pestañas
       contenidoPestana.forEach((contenido) => contenido.classList.remove("activa"));
-      
-      // Calcular el índice de la nueva pestaña activa
+   
       const nuevaPestanaIndex = (i - 1 + contenidoPestana.length) % contenidoPestana.length;
 
-      // Mostrar la nueva pestaña activa
       contenidoPestana[nuevaPestanaIndex].classList.add("activa");
 
-      // Obtener el ID de la nueva pestaña activa
       const nuevaPestanaId = pestanas[nuevaPestanaIndex].id;
-
-      // Cambiar los colores según la nueva pestaña activa
       cambiarColores(nuevaPestanaId);
     });
   });
 });
 
 window.addEventListener('resize', function() {
-  // Forzar una recarga de la página cuando cambia el tamaño de la ventana
   window.location.reload();
 });
