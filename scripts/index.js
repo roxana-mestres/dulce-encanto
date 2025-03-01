@@ -16,7 +16,7 @@ function actualizarBanda() {
     for (const texto of textos) {
       contenidoHTML += `<p>${texto}</p>
             <img
-              src="/imagenes/corazon_banda.svg"
+              src="/dulce-encanto/imagenes/corazon_banda.svg"
               alt="corazones decorativos"
               class="corazones-banda"
             />`;
