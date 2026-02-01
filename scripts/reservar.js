@@ -113,7 +113,7 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     fechaSeleccionada: fecha,
   };
 
-  fetch("https://proyectos-roxana-mestres.xyz/dulce-encanto/reservas", {
+  fetch("/reservas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
