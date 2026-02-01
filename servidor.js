@@ -7,11 +7,11 @@ const path = require("path");
 
 // Configurar servidor Express
 const app = express();
-const PORT = process.env.PORT || 3004;
+const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: "https://proyectos-roxana-mestres.xyz/",
+    origin: "http://dulceencanto.roxana-mestres.com:3003",
   })
 );
 
