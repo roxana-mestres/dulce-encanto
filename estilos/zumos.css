@@ -63,22 +63,22 @@ div.img-fondo {
   z-index: -1;
 }
 div.img-fondo.zumo{
-  background-image: url(/dulce-encanto/imagenes/fondo-zumos.svg);
+  background-image: url(/imagenes/fondo-zumos.svg);
 }
 div.img-fondo.expresso{
-  background-image: url(/dulce-encanto/imagenes/fondo-expresso.svg);
+  background-image: url(/imagenes/fondo-expresso.svg);
 }
 div.img-fondo.matcha{
-  background-image: url(/dulce-encanto/imagenes/fondo-matcha.svg);
+  background-image: url(/imagenes/fondo-matcha.svg);
 }
 div.img-fondo.chai{
-  background-image: url(/dulce-encanto/imagenes/fondo-chai.svg);
+  background-image: url(/imagenes/fondo-chai.svg);
 }
 div.img-fondo.capuccino{
-  background-image: url(/dulce-encanto/imagenes/fondo-capuccino.svg);
+  background-image: url(/imagenes/fondo-capuccino.svg);
 }
 div.img-fondo.frapuccino{
-  background-image: url(/dulce-encanto/imagenes/fondo-frapuccino.svg);
+  background-image: url(/imagenes/fondo-frapuccino.svg);
 }
 div.contenedor-bebida img {
   width: 50vw;
@@ -97,30 +97,30 @@ div.img-accent {
   left: 30%;
 }
 div.img-accent.zumo{
-  background-image: url(/dulce-encanto/imagenes/decoracion-zumos.svg);
+  background-image: url(/imagenes/decoracion-zumos.svg);
 }
 div.img-accent.expresso{
-  background-image: url(/dulce-encanto/imagenes/decoracion-expresso.svg);
+  background-image: url(/imagenes/decoracion-expresso.svg);
   top: 1%;
   left: 30%;
 }
 div.img-accent.matcha{
-  background-image: url(/dulce-encanto/imagenes/decoracion-matcha.svg);
+  background-image: url(/imagenes/decoracion-matcha.svg);
   top: 50%;
   left: 45%;
 }
 div.img-accent.chai{
-  background-image: url(/dulce-encanto/imagenes/decoracion-chai.svg);
+  background-image: url(/imagenes/decoracion-chai.svg);
   top: 1%;
   left: 40%;
 }
 div.img-accent.capuccino{
-  background-image: url(/dulce-encanto/imagenes/decoracion-capuccino.svg);
+  background-image: url(/imagenes/decoracion-capuccino.svg);
   top: 1%;
   left: 32%;
 }
 div.img-accent.frapuccino{
-  background-image: url(/dulce-encanto/imagenes/hielos.svg);
+  background-image: url(/imagenes/hielos.svg);
   top: 50%;
   left: 35%;
 }
@@ -174,22 +174,22 @@ div.flecha-der{
   right: 0;
 }
 div.flecha-der.zumos, div.flecha-izq.zumos{
-  background-image: url(/dulce-encanto/imagenes/flecha-zumos.svg);
+  background-image: url(/imagenes/flecha-zumos.svg);
 }
 div.flecha-der.frapuccino, div.flecha-izq.frapuccino{
-  background-image: url(/dulce-encanto/imagenes/flecha-frapuccino.svg);
+  background-image: url(/imagenes/flecha-frapuccino.svg);
 }
 div.flecha-der.capuccino, div.flecha-izq.capuccino{
-  background-image: url(/dulce-encanto/imagenes/flecha-capuccino.svg);
+  background-image: url(/imagenes/flecha-capuccino.svg);
 }
 div.flecha-der.matcha, div.flecha-izq.matcha{
-  background-image: url(/dulce-encanto/imagenes/flecha-matcha.svg);
+  background-image: url(/imagenes/flecha-matcha.svg);
 }
 div.flecha-der.chai, div.flecha-izq.chai{
-  background-image: url(/dulce-encanto/imagenes/flecha-chai.svg);
+  background-image: url(/imagenes/flecha-chai.svg);
 }
 div.flecha-der.expresso, div.flecha-izq.expresso{
-  background-image: url(/dulce-encanto/imagenes/flecha-expresso.svg);
+  background-image: url(/imagenes/flecha-expresso.svg);
 }
 
 div.img-accent.zumos {
@@ -282,20 +282,20 @@ div.img-decoracion{
     right: 0;
 }
 div.img-decoracion.zumos{
-  background-image: url(/dulce-encanto/imagenes/estrellas-zumos.svg);
+  background-image: url(/imagenes/estrellas-zumos.svg);
 }
 div.img-decoracion.expresso{
-  background-image: url(/dulce-encanto/imagenes/estrellas-expresso.svg);
+  background-image: url(/imagenes/estrellas-expresso.svg);
 }
 div.img-decoracion.matcha{
-  background-image: url(/dulce-encanto/imagenes/estrellas-matcha.svg);
+  background-image: url(/imagenes/estrellas-matcha.svg);
 }
 div.img-decoracion.chai{
-  background-image: url(/dulce-encanto/imagenes/estrellas-chai.svg);
+  background-image: url(/imagenes/estrellas-chai.svg);
 }
 div.img-decoracion.capuccino{
-  background-image: url(/dulce-encanto/imagenes/estrellas-capuccino.svg);
+  background-image: url(/imagenes/estrellas-capuccino.svg);
 }
 div.img-decoracion.frapuccino{
-  background-image: url(/dulce-encanto/imagenes/estrellas-frapuccino.svg);
+  background-image: url(/imagenes/estrellas-frapuccino.svg);
 }

@@ -113,7 +113,7 @@ function guardarReserva(nombre, correo, telefono, personas, hora, dia, fecha) {
     fechaSeleccionada: fecha,
   };
 
-  fetch("/reservas", {
+  fetch("https://roxana-mestres.com/dulce-encanto/reservas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -161,13 +161,12 @@ botonPM.addEventListener("click", () => {
 botonAM.addEventListener("click", () => {
   const horas = document.querySelectorAll(".hora");
   horas.forEach((hora) => {
-    hora.textContent = `${
-      hora.classList.contains("uno")
+    hora.textContent = `${hora.classList.contains("uno")
         ? "9:00"
         : hora.classList.contains("dos")
-        ? "10:00"
-        : "11:00"
-    } a.m.`;
+          ? "10:00"
+          : "11:00"
+      } a.m.`;
     hora.classList.remove("pm");
     hora.classList.add("am");
   });
@@ -176,13 +175,12 @@ botonAM.addEventListener("click", () => {
 botonPM.addEventListener("click", () => {
   const horas = document.querySelectorAll(".hora");
   horas.forEach((hora) => {
-    hora.textContent = `${
-      hora.classList.contains("uno")
+    hora.textContent = `${hora.classList.contains("uno")
         ? "17:00"
         : hora.classList.contains("dos")
-        ? "18:00"
-        : "19:00"
-    } p.m.`;
+          ? "18:00"
+          : "19:00"
+      } p.m.`;
     hora.classList.remove("am");
     hora.classList.add("pm");
   });
@@ -326,7 +324,7 @@ function sincronizarDiasSemana(horaSeleccionada) {
     const diaTexto = diaElemento.textContent.trim();
 
     const diaNumero = diasSemana.indexOf(diaTexto);
- 
+
     const diaSeleccionado = diaNumero !== -1 ? diaNumero + 1 : "";
 
     document

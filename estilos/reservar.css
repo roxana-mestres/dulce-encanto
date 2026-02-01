@@ -89,7 +89,7 @@ button.flecha {
   margin: 0;
   width: 5vw;
   height: 3vh;
-  background-image: url(/dulce-encanto/imagenes/flecha-reservar.svg);
+  background-image: url(/imagenes/flecha-reservar.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -240,7 +240,7 @@ div.calendario::-webkit-scrollbar-thumb:hover {
   margin: -5px;
   width: 5vw;
   height: 60vh;
-  background-image: url(/dulce-encanto/imagenes/flecha-reservar.svg);
+  background-image: url(/imagenes/flecha-reservar.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -291,15 +291,15 @@ div.icono {
 }
 
 div.icono.instagram {
-  background-image: url(/dulce-encanto/imagenes/instagram-logo.svg);
+  background-image: url(/imagenes/instagram-logo.svg);
 }
 
 div.icono.github {
-  background-image: url(/dulce-encanto/imagenes/github-logo.svg);
+  background-image: url(/imagenes/github-logo.svg);
 }
 
 div.icono.linkedin {
-  background-image: url(/dulce-encanto/imagenes/linkedin-logo.svg);
+  background-image: url(/imagenes/linkedin-logo.svg);
 }
 
 div.footer p {
